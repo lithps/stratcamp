@@ -1,0 +1,119 @@
+# 1a. Print name
+
+print("1a. Josh")
+
+# 1b. Name with Variables
+
+name = "Josh"
+age = "27"
+
+print(f"1b. My name is {name}, and I am {age} years old.")
+
+# 1c. Temperature
+
+Temperature = 26.66
+Temperature_Fahrenheit = (1.8 * Temperature) + 32
+
+print(f"1c. {Temperature_Fahrenheit}\n")
+
+# 2a. Operators
+
+input_name = input("Please input your name: ")
+
+if input_name:
+    print(f"2a. Welcome {input_name}!")
+    a = input("Input a value for a: ")
+    b = input("Input a value for b: ")
+    a = int(a)
+    b = int(b)
+    # operation variables
+    add = a + b
+    difference = a - b
+    product = a * b
+    quotient = a / b
+    modulus = a % b
+    # print
+    print("a + b =",add)
+    print("a - b =",difference)
+    print("a * b =", product)
+    print("a / b =", quotient)
+    print("a % b =", modulus)
+
+else:
+    print("No name entered. Preparing self-destruct sequence...")
+
+#2b. +=
+
+x = 5
+x += 10
+
+print(x)
+
+#3a. Remove banana add orange
+
+Fruits = ["apple", "banana", "cherry"]
+Fruits.append("orange")
+Fruits.remove("banana")
+print(Fruits)
+
+#3b. Sum of list
+num_list = [2,3,5,7,11,13,17,19]
+sum_list = sum(num_list)
+
+print(sum_list)
+
+#4a. Slice list
+
+A_List = [0,1,2,3,4,5,6,7,8,9]
+B_List = A_List[7:10:]
+
+print(B_List)
+
+rev_list = A_List[: : -1]
+print(rev_list)
+
+#5a. Print pos, neg, zero
+
+user_num = input("Please enter an integer: ")
+user_num = int(user_num)
+
+if user_num > 0:
+    print("Positive")
+elif user_num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+# 5b. Print even or odd
+
+if user_num % 2 == 1:
+    print("Well...that's ODD.")
+else:
+    print("Who are you getting EVEN with?")
+
+# 6a. Print all even numbers
+
+for i in range(1,51):
+    if i % 2 == 0:
+        print(i, end=" ")
+
+# 6b. Print names loop
+
+name_list = ["Frank", "Pat", "Joe", "Alex", "Bart","Steve"]
+for index, names in enumerate(name_list, start=1):
+    print(f"{index}-{names}",end=" ")
+
+# 7a. Loop until quit
+
+secret_word = "quit"
+guess = ""
+while guess != secret_word:
+    guess = input("What's the password? ")
+
+# 7b. Count down to success
+counter = 10
+
+while counter > 0:
+    print(counter)
+    counter -= 1
+print("Success!")
